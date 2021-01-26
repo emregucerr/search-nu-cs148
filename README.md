@@ -52,7 +52,7 @@ In this example, the traffic time between Campus and Beach is `3`. `None` indica
 
 ## Homework Deliverable
 
-For this assignment, you must implement all three (3) functions in `student_code.py`. Each function must return a path from landmark `start` to landmark `end`.
+For this homework, you must implement all three (3) functions in `student_code.py`. Each function must return a path from landmark `start` to landmark `end`.
 
 Note that:
 
