@@ -50,7 +50,7 @@ Time_map = {
 
 In this example, the traffic time between Campus and Beach is `3`. `None` indicates that there is no road which directly connects the two landmarks. Off-road driving is prohibited by local law, so drivers must only take the roads marked on the diagram above. Combining this legal requirement and with the volatile traffic pattern of Heavanston, it is certain that the distance map can only be used as a heuristic for the A\* algorithm. It is also noteworthy that the time it takes traveling on the two sides of the same road is most likely different. 
 
-## Assignment Deliverable
+## Homework Deliverable
 
 For this assignment, you must implement all three (3) functions in `student_code.py`. Each function must return a path from landmark `start` to landmark `end`.
 
