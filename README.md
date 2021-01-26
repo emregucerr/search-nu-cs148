@@ -2,7 +2,7 @@
 
 ## Back Story
 
-You work at a food delivery startup called BigByte. The company consists of two people, you and Willie, both alumni of Nerdwestern University located in Heavanston. Of the two, you take care of software engineering and Willie handles the rest. 
+You work at a food delivery startup called BigByte. The company consists of two people, Willie and you, both alumni of Nerdwestern University located in Heavanston. Of the two, you take care of software engineering and Willie handles the rest. 
 
 BigByte's target client restaurants and ordering customers are all based in Heavanston, which has a handful of landmarks and a heavily fluctuating traffic pattern. To ensure that your delivery fleet works efficiently, Willie asked you to come up with a route planning system. 
 
