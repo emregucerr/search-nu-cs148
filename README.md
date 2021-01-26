@@ -1,4 +1,4 @@
-# Assignment 1—Search
+# HW 1—Search
 
 ## Back Story
 
