@@ -14,7 +14,7 @@ A diagram explaining the relative position of major landmarks of Heavanston is s
 
 <img src="map.png" width="60%">
 
-Now, Willie understands the gravity of the task he's handed you. As such, he has supplied you with a few different maps you can use to develop the software. These maps can be found in the **a_star_gradingtests.py** file. The file also has tests that you can use to test your software. **Willie's only going to accept your work if your code passes all the tests.** Additionally, in order to test for robustness of your softare, **Willie may also use some additional tests that he's not willing to show you now.** They will be different from the tests he's supplied you with but similar enough that if your implementation is correct, it should pass the unseen tests too as long as you don't obtain any shortcuts (e.g., hardcoding, writing codes specifically aimed at passing the tests while not implementing the desired algorithm, etc.) 
+Now, Willie understands the gravity of the task he's handed you. As such, he has supplied you with a few different maps you can use to develop the software. These maps can be found in the **a_star_gradingtests.py** file. The file also has tests that you can use to test your software. **Willie's only going to accept your work if your code passes all the tests.** Additionally, in order to test for robustness of your softare, **Willie may also use some additional tests that he's not willing to show you now.** They will be different from the tests he's supplied you with but similar enough that if your implementation is correct, it should pass the unseen tests too as long as you don't obtain any shortcuts (e.g., hardcoding, writing code specifically aimed at passing the tests while not implementing the desired algorithm, etc.) 
 
 Things to note about the maps:
 
@@ -22,9 +22,11 @@ Things to note about the maps:
 
 2. The maps for DFS don't have any loops, so even if you don't keep a list of expanded nodes, you should be alright.
 
-3. The maps for BFS, however, may contain loops, so it's best to maintain a list of expanded nodes. Willie said the "Artificial Intelligence: A Modern Approach" book has stuff about BFS.
+3. The maps for BFS, however, may contain loops, so it's best to maintain a list of expanded nodes. Willie said the *Artificial Intelligence: A Modern Approach* book has stuff about BFS.
 
-4. Your A\* algorithm will the calculate fastest route between any pairs of the landmarks. Your A\* function will be given two routing maps as inputs. The first map specifies the straight-line distance between two landmarks (Willie measured the printed map and did the data entry); we will refer to this as the **distance map**. The second map is based on the data from the Archive traffic survey. It specifies the expected time it takes a driver to go from one landmark to a neigbhoring landmark; we will refer to this as the **time map**. For all three implementations (BFS, DFS, and A\*), you will use the time differences between places as the main metric, not distance. However, for A\*, you will use the distances between places as the heuristic (how far you're from the destination). In other words, for A\*, the distance from the start to your current location will be time-based, but the distance from your current location to the destination will be distance-based.
+4. Your algorithms will the calculate fastest (thinking shortest in time) route between any pairs of the landmarks.
+
+5. Your A\* function will be given two routing maps as inputs. The first map specifies the straight-line distance between two landmarks (Willie measured the printed map and did the data entry); we will refer to this as the **distance map**. The second map is based on the data from the Archive traffic survey. It specifies the expected time it takes a driver to go from one landmark to a neigbhoring landmark; we will refer to this as the **time map**. For all three implementations (BFS, DFS, and A\*), you will use the time differences between places as the main metric, not distance. However, for A\*, you will use the distances between places as the **heuristic** (how far you're from the destination). In other words, for A\*, the distance from the start to your current location will be time-based, but the distance from your current location to the destination will be distance-based.
 
 When passed to your A\* implementation, both the distance map and the time map are stored in the same format (a Python dictionary). The following is an example time map.
 
