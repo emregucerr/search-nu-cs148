@@ -125,7 +125,7 @@ class UnitTests(unittest.TestCase):
 		expand.expand_count = 0
 		path = sc.depth_first_search(time_mapT, 'a', 'e')
 		self.assertEqual(path, ['a', 'c', 'h', 'e'])
-		self.assertEqual(expand.expand_count, 3)
+		self.assertEqual(expand.expand_count, 4)
 	
 	def test4(self):
 		expand.expand_count = 0
