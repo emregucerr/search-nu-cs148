@@ -1,4 +1,4 @@
-# HW 1—Search
+# HW1—Search
 
 ## Back Story
 
