@@ -20,7 +20,7 @@ Things to note about the maps:
 
 1. If you look at the test functions, you'll see that certain tests use certain maps. Please be mindful of that.
 
-2. The maps for DFS don't have any loops, so even if you don't keep a list of expanded nodes, you should be alright.
+2. The maps for DFS don't have any loops, so even if you don't keep a list of expanded nodes, you should be alright. Note that this means that once a node is expanded, it doesn't show up again further down that same branch. However, the same node can show up on different branches of the tree, which means in the entire search, the same node can be expanded more than once. In case you choose to keep track of expanded nodes, that should not prevent you from expanding a node that you already expanded on a different branch earlier.
 
 3. The maps for BFS, however, may contain loops, so it's best to maintain a list of expanded nodes. Willie said the *Artificial Intelligence: A Modern Approach* book has stuff about BFS.
 
