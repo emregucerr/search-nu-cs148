@@ -20,11 +20,11 @@ Things to note about the maps:
 
 1. If you look at the test functions, you'll see that certain tests use certain maps. Please be mindful of that.
 
-2. The maps for DFS don't have any loops, so even if you don't keep a list of expanded nodes, you should be alright. Note that this means that once a node is expanded, it doesn't show up again further down that same branch. However, the same node can show up on different branches of the tree, which means in the entire search, the same node can be expanded more than once. In case you choose to keep track of expanded nodes, that should not prevent you from expanding a node that you already expanded on a different branch earlier.
+2. With DFS, once a node is expanded, it must not show up again further down that same branch. However, the same node can show up on different branches of the tree, which means in the entire search, the same node can be expanded more than once. That said, the maps for DFS don't have any loops, so it is not necessary to keep a list of expanded nodes. In fact, if you keep a list of expanded nodes, it will result in incorrect answers, so do not keep such a list.
 
 3. The maps for BFS, however, may contain loops, so it's best to maintain a list of expanded nodes. Willie said the *Artificial Intelligence: A Modern Approach* book has stuff about BFS.
 
-4. Your algorithms will the calculate fastest (thinking shortest in time) route between any pairs of the landmarks.
+4. Your algorithms will calculate the fastest route between any pairs of the landmarks. Now, fastest doesn't mean shortest. Here, fastest means shortest in time, not shortest in distance. The algorithms will not necessarily find the shortest path.
 
 5. Your A\* function will be given two routing maps as inputs. The first map specifies the straight-line distance between two landmarks (Willie measured the printed map and did the data entry); we will refer to this as the **distance map**. The second map is based on the data from the Archive traffic survey. It specifies the expected time it takes a driver to go from one landmark to a neigbhoring landmark; we will refer to this as the **time map**. For all three implementations (BFS, DFS, and A\*), you will use the time differences between places as the main metric, not distance. However, for A\*, you will use the distances between places as the **heuristic** (how far you're from the destination). In other words, for A\*, the distance from the start to your current location will be time-based, but the distance from your current location to the destination will be distance-based.
 
@@ -62,7 +62,7 @@ Note that:
 
 Your `a_star_search` function must implement an A\* **graph** search algorithm, and it must use the `expand` function in `expand.py`. With the `expand` function, we can verify that the correct number of nodes are expanded. As a reminder, graph search algorithms do not expand nodes that have already been visited. 
 
-Your BFS and DFS implementations will essentially be **tree** search algorithms operating on the graphs that the maps form.
+Your BFS and DFS implementations will essentially be **tree** search algorithms operating on the graphs that the maps form. Right, the maps are graphs, but for BFS and DFS, you will implement tree searches on those graphs. Now, just because they are tree searches, it doesn't mean nodes already visited can be expanded -- they can for DFS (see #2 under Task Parameters), but it is incorrect behavior for BFS.
 
 Furthermore, the Autograder that Willie will use to test your code assumes that all of the code that is needed to properly grade your assignment submission is included in `student_code.py`. Please adhere to this constraint as you develop your response. 
 
