@@ -62,7 +62,7 @@ Note that:
 
 Your `a_star_search` function must implement an A\* **graph** search algorithm, and it must use the `expand` function in `expand.py`. With the `expand` function, we can verify that the correct number of nodes are expanded. As a reminder, graph search algorithms do not expand nodes that have already been visited. 
 
-Your BFS and DFS implementations will essentially be **tree** search algorithms operating on the graphs that the maps form. Right, the maps are graphs, but for BFS and DFS, you will implement tree searches on those graphs. Now, just because they are tree searches, it doesn't mean nodes already visited can be expanded -- they can for DFS (see #2 above), it is incorrect behavior for BFS.
+Your BFS and DFS implementations will essentially be **tree** search algorithms operating on the graphs that the maps form. Right, the maps are graphs, but for BFS and DFS, you will implement tree searches on those graphs. Now, just because they are tree searches, it doesn't mean nodes already visited can be expanded -- they can for DFS (see #2 under Task Parameters), it is incorrect behavior for BFS.
 
 Furthermore, the Autograder that Willie will use to test your code assumes that all of the code that is needed to properly grade your assignment submission is included in `student_code.py`. Please adhere to this constraint as you develop your response. 
 
