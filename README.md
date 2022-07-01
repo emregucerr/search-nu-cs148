@@ -24,7 +24,7 @@ Things to note about the maps:
 
 3. The maps for BFS, however, may contain loops, so it's best to maintain a list of expanded nodes. Willie said the *Artificial Intelligence: A Modern Approach* book has stuff about BFS.
 
-4. Your algorithms will calculate the fastest route between any pairs of the landmarks. Now, fastest doesn't mean shortest. Here, fastest means shortest in time, not shortest in distance. The algorithms will not necessarily find the shortest path.
+4. While Willie would love for your algorithms to find the shortest route from the restaurant to the customer, he understands that while BFS and A* will do so by virtue of what they are, DFS is not guaranteed to find the shortest route, and you shouldn't worry about it.
 
 5. When a node is expanded, the order in which its children nodes are added to the fringe will determine if the search will traverse the tree from left to right or right to left. Either direction of traversal is acceptable, i.e., the test functions will accept correct results from either direction of traversal.
 
