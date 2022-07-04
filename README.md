@@ -30,6 +30,8 @@ Things to note about the maps:
 
 6. Your A\* function will be given two routing maps as inputs. The first map specifies the straight-line distance between two landmarks (Willie measured the printed map and did the data entry); we will refer to this as the **distance map**. The second map is based on the data from the Archive traffic survey. It specifies the expected time it takes a driver to go from one landmark to a neigbhoring landmark; we will refer to this as the **time map**. For all three implementations (BFS, DFS, and A\*), you will use the time differences between places as the main metric, not distance. However, for A\*, you will use the distances between places as the **heuristic** (how far you're from the destination). In other words, for A\*, the distance from the start to your current location will be time-based, but the distance from your current location to the destination will be distance-based.
 
+7. With A\*, if two or more nodes have the same f(n), you should use h(n) to break the tie, i.e., pick the node that has the smallest h(n). If two or more nodes have the same h(n), then pick the node that entered the open list first when returned/yielded by expand(). If you're using a priority queue, then the order of the nodes will not be preserved due to sorting, so you may need to use a separate variable to keep track of the order.
+
 When passed to your A\* implementation, both the distance map and the time map are stored in the same format (a Python dictionary). The following is an example time map.
 
 ```python
@@ -55,6 +57,8 @@ In this example, the traffic time between Campus and Beach is `3`. `None` indica
 ## Homework Deliverable
 
 For this homework, you must implement all three (3) functions in `student_code.py`. Each function must return a path from landmark `start` to landmark `end`.
+
+**The tests provided with this homework assume the use of Python 3. We recommend Python 3.6 or above.**
 
 Note that:
 
